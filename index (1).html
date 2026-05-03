@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de eBooks - Salud y Bienestar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.4em;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .category-title {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin: 60px 0 30px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .category-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: #e74c3c;
+            border-radius: 2px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #eee;
+        }
+
+        .product-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .product-image-container {
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+            background: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .product-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image-container img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .price-tag {
+            background: #e74c3c;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .product-name {
+            font-size: 1.6em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 800;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-description {
+            color: #7f8c8d;
+            font-size: 1em;
+            margin-bottom: 25px;
+            flex-grow: 1;
+        }
+
+        .buy-button {
+            background: #27ae60;
+            color: white;
+            text-decoration: none;
+            padding: 18px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+        }
+
+        .buy-button:hover {
+            background: #2ecc71;
+            box-shadow: 0 8px 20px rgba(46, 204, 113, 0.4);
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            margin-top: 80px;
+        }
+
+        footer p {
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5em; }
+            .products-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <h1>Salud y Bienestar</h1>
+        <p>Transforma tu vida con nuestros métodos naturales y efectivos</p>
+    </section>
+
+    <div class="container">
+        
+        <!-- SECCIÓN DE CAFÉS -->
+        <h2 class="category-title">☕ Colección de Cafés Especiales</h2>
+        <div class="products-grid">
+            
+            <!-- Café 1 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="quema_grassa_red_v2.png" alt="Café QuemaGrasa_MX">
+                </div>
+                <div class="product-info">
+                    <span class="price-tag">$17 USD</span>
+                    <h3 class="product-name">Café QuemaGrasa_MX</h3>
+                    <p class="product-description">Acelera tu metabolismo y quema grasa de forma natural con nuestra fórmula premium.</p>
+                    <a href="https://pay.hotmart.com/T105625460B" class="buy-button" target="_blank">¡Comprar Ahora!</a>
+                </div>
+            </div>
+
+            <!-- Café 2 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="livro_fundo_amarelo.png" alt="Café VientrePlano_Detox">
+                </div>
+                <div class="product-info">
+                    <span class="price-tag">$17 USD</span>
+                    <h3 class="product-name">Café VientrePlano_Detox</h3>
+                    <p class="product-description">Desintoxica tu cuerpo y logra un vientre plano con el poder del café natural.</p>
+                    <a href="https://pay.hotmart.com/T105625345S" class="buy-button" target="_blank">¡Comprar Agora!</a>
+                </div>
+            </div>
+
+            <!-- Café 3 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="caffe_appetite_control_gray_v2.png" alt="Café Appetite_Control">
+                </div>
+                <div class="product-info">
+                    <span class="price-tag">$17 USD</span>
+                    <h3 class="product-name">Café Appetite_Control</h3>
+                    <p class="product-description">Controla la ansiedad y el hambre durante el día con nuestra mezcla saciante.</p>
+                    <a href="https://pay.hotmart.com/X105625079F" class="buy-button" target="_blank">¡Comprar Ahora!</a>
+                </div>
+            </div>
+
+            <!-- Café 4 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="Designsemnome(2).png" alt="Café Bariátrico">
+                </div>
+                <div class="product-info">
+                    <span class="price-tag">$17 USD</span>
+                    <h3 class="product-name">Café Bariátrico</h3>
+                    <p class="product-description">Suplemento ideal para el control de peso y apoyo nutricional especializado.</p>
+                    <a href="https://pay.hotmart.com/U105625586K" class="buy-button" target="_blank">¡Comprar Ahora!</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SECCIÓN DE JUGOS -->
+        <h2 class="category-title">🥤 Colección de Jugos Detox</h2>
+        <div class="products-grid">
+            
+            <!-- Jugo 1 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="jugo_vientre_plano_detox.png" alt="Jugo Vientre Plano Detox">
+                </div>
+                <div class="product-info">
+                    <span class="price-tag">$19 USD</span>
+                    <h3 class="product-name">Jugo Vientre Plano Detox</h3>
+                    <p class="product-description">Limpia tu organismo y reduce medidas con nuestra guía de jugos naturales.</p>
+                    <a href="https://pay.hotmart.com/E105637066Q" class="buy-button" target="_blank">¡Comprar Ahora!</a>
+                </div>
+            </div>
+
+            <!-- Jugo 2 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="jugo_energia_quema_calorias.png" alt="Jugo Energía Quema Calorías">
+                </div>
+                <div class="product-info">
+                    <span class="price-tag">$19 USD</span>
+                    <h3 class="product-name">Jugo Energía Quema Calorías</h3>
+                    <p class="product-description">Aumenta tu energía diaria mientras quemas calorías de forma eficiente.</p>
+                    <a href="https://pay.hotmart.com/H105637052E" class="buy-button" target="_blank">¡Comprar Ahora!</a>
+                </div>
+            </div>
+
+            <!-- Jugo 3 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="jugo_limpiador_total.png" alt="Jugo Limpiador Total">
+                </div>
+                <div class="product-info">
+                    <span class="price-tag">$19 USD</span>
+                    <h3 class="product-name">Jugo Limpiador Total</h3>
+                    <p class="product-description">Una limpieza profunda para tu sistema digestivo y mayor bienestar general.</p>
+                    <a href="https://pay.hotmart.com/C105637088R" class="buy-button" target="_blank">¡Comprar Ahora!</a>
+                </div>
+            </div>
+
+            <!-- Jugo 4 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="jugo_nocturno_adelgazante.png" alt="Jugo Nocturno Adelgazante">
+                </div>
+                <div class="product-info">
+                    <span class="price-tag">$19 USD</span>
+                    <h3 class="product-name">Jugo Nocturno Adelgazante</h3>
+                    <p class="product-description">Aprovecha el descanso nocturno para potenciar la pérdida de peso natural.</p>
+                    <a href="https://pay.hotmart.com/Q105637035G" class="buy-button" target="_blank">¡Comprar Ahora!</a>
+                </div>
+            </div>
+
+            <!-- Jugo 5 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="jugo_quema_grasa_tropical.png" alt="Jugo Quema Grasa Tropical">
+                </div>
+                <div class="product-info">
+                    <span class="price-tag">$19 USD</span>
+                    <h3 class="product-name">Jugo Quema Grasa Tropical</h3>
+                    <p class="product-description">Sabor delicioso y tropical con potentes beneficios quemagrasa.</p>
+                    <a href="https://pay.hotmart.com/W105625191L" class="buy-button" target="_blank">¡Comprar Ahora!</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SECCIÓN DE GUÍAS -->
+        <h2 class="category-title">📚 Guías de Transformación</h2>
+        <div class="products-grid">
+            
+            <!-- Guía 1 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="livro_fundo_verde.png" alt="Adelgazamiento Saludable">
+                </div>
+                <div class="product-info">
+                    <span class="price-tag">$10 USD</span>
+                    <h3 class="product-name">Adelgazamiento Saludable</h3>
+                    <p class="product-description">Aprende a perder peso de forma sostenible sin dietas extremas.</p>
+                    <a href="https://pay.hotmart.com/E105668582T" class="buy-button" target="_blank">¡Comprar Ahora!</a>
+                </div>
+            </div>
+
+            <!-- Guía 2 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="livro_fundo_vinho.png" alt="Cero Flacidez y Celulitis">
+                </div>
+                <div class="product-info">
+                    <span class="price-tag">$24 USD</span>
+                    <h3 class="product-name">Cero Flacidez y Celulitis</h3>
+                    <p class="product-description">Recupera la firmeza de tu piel con nuestro método especializado.</p>
+                    <a href="https://pay.hotmart.com/K105668343O" class="buy-button" target="_blank">¡Comprar Ahora!</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Tienda de Salud y Bienestar. Todos los derechos reservados.</p>
+        <p>Pagos seguros procesados por Hotmart.</p>
+    </footer>
+
+</body>
+</html>
